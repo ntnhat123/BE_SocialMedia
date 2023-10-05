@@ -38,6 +38,9 @@ app.use("/post", post);
 app.use("/comment", comment);
 app.use("/test", test);
 app.use("/video", video);
+app.get("/", (req, res) => {
+  res.send("Hello to Social API");
+});
 
 //socket
 
