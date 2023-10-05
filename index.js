@@ -55,7 +55,7 @@ io.on("connection", (socket) => {
 });
 
 mongoose
-  .connect(URL, { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect(URL)
   .then(() => {
     console.log("Connected to MongoDB");
     httpServer.listen(port, () =>
