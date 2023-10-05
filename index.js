@@ -53,6 +53,7 @@ io.on("connection", (socket) => {
 
   // Handle other socket events as needed
 });
+mongoose.set('strictQuery', false);
 
 mongoose
   .connect(URL)
