@@ -53,10 +53,10 @@ io.on("connection", (socket) => {
 
   // Handle other socket events as needed
 });
-mongoose.set('strictQuery', false);
+mongoose.set('strictQuery', true);
 
 mongoose
-  .connect(URL)
+  .connect(URL, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
     console.log("Connected to MongoDB");
     httpServer.listen(port, () =>
