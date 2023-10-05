@@ -51,11 +51,12 @@ io.on("connection", (socket) => {
   // Handle other socket events as needed
 });
 
-mongoose.connect(URL, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose
+  .connect(URL, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
     console.log("Connected to MongoDB");
-    httpServer.listen(port, () => console.log(`Server running on port: ${port}`))
-  }
-  )
+    httpServer.listen(port, () =>
+      console.log(`Server running on port: ${port}`)
+    );
+  })
   .catch((error) => console.log(error.message));
-
