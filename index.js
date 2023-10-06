@@ -40,7 +40,7 @@ app.use("/test", test);
 app.use("/video", video);
 app.get("/", (req, res) => {
   res.send(
-    "<div style='text-align: center; margin-top: 20px;'><h1>Welcome</h1><h2>Server is running</h2></div>"
+    "<div style='text-align: center; margin-top: 20px;'><h1 style = 'color: #ff0000;'>Welcome</h1><h2>Server is running</h2></div>"
   );
 });
 
